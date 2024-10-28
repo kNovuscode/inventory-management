@@ -113,7 +113,8 @@
                     <li *ngIf="isActive('purchases')">
                         <p routerLink="/admin/purchases/debit-notes" class="menu-item"><i class="fe fe-file-text"></i>
                             <span>Debit
-                                Notes</span></p>
+                                Notes</span>
+                        </p>
                     </li>
 
                     <!-- Finance & Accounts -->
@@ -122,12 +123,14 @@
                         <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
                     </li>
                     <li *ngIf="isActive('financeAccounts')">
-                        <p routerLink="/expenses" class="menu-item"><i class="fe fe-file-plus"></i>
+                        <p routerLink="/admin/finance-account/expenses" class="menu-item"><i
+                                class="fe fe-file-plus"></i>
                             <span>Expenses</span>
                         </p>
                     </li>
                     <li *ngIf="isActive('financeAccounts')">
-                        <p routerLink="/payments" class="menu-item"><i class="fe fe-credit-card"></i>
+                        <p routerLink="/admin/finance-account/payments" class="menu-item"><i
+                                class="fe fe-credit-card"></i>
                             <span>Payments</span>
                         </p>
                     </li>
@@ -138,12 +141,13 @@
                         <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
                     </li>
                     <li *ngIf="isActive('quotations')">
-                        <p routerLink="/quotations" class="menu-item"><i class="fe fe-clipboard"></i>
+                        <p routerLink="/admin/quotations/list" class="menu-item"><i class="fe fe-clipboard"></i>
                             <span>Quotations</span>
                         </p>
                     </li>
                     <li *ngIf="isActive('quotations')">
-                        <p routerLink="/delivery-challans" class="menu-item"><i class="fe fe-file-text"></i>
+                        <p routerLink="/admin/quotations/delivery-challans" class="menu-item"><i
+                                class="fe fe-file-text"></i>
                             <span>Delivery Challans</span>
                         </p>
                     </li>
@@ -154,52 +158,33 @@
                         <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
                     </li>
                     <li *ngIf="isActive('reportsMain')">
-                        <p routerLink="/payment-summary" class="menu-item"><i class="fe fe-credit-card"></i>
+                        <p routerLink="/admin/reports/payment-summary" class="menu-item"><i class="fe fe-credit-card"></i>
                             <span>Payment Summary</span>
                         </p>
-                    </li>
-                    <li class="submenu" *ngIf="isActive('reportsMain')" (click)="toggleMenu('reports')">
-                        <i class="fe fe-box"></i> <span>Reports</span>
-                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
-                        <span class="menu-arrow"></span>
-                        <ul [ngStyle]="{ display: isActive('reports') ? 'block' : 'none' }">
-                            <li>
-                                <p routerLink="/expense-report" class="menu-item">Expense Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/purchase-report" class="menu-item">Purchase Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/purchase-return" class="menu-item">Purchase Return Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/sales-report" class="menu-item">Sales Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/sales-return-report" class="menu-item">Sales Return Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/quotation-report" class="menu-item">Quotation Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/payment-report-2" class="menu-item">Payment Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/stock-report" class="menu-item">Stock Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/low-stock-report" class="menu-item">Low Stock Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/income-report" class="menu-item">Income Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/tax-purchase" class="menu-item">Tax Report</p>
-                            </li>
-                            <li>
-                                <p routerLink="/profit-loss-list" class="menu-item">Profit & Loss</p>
-                            </li>
-                        </ul>
+
+                        <p routerLink="/expense-report" class="menu-item">Expense Report</p>
+
+                        <p routerLink="/purchase-report" class="menu-item">Purchase Report</p>
+
+                        <p routerLink="/purchase-return" class="menu-item">Purchase Return Report</p>
+
+                        <p routerLink="/sales-report" class="menu-item">Sales Report</p>
+
+                        <p routerLink="/sales-return-report" class="menu-item">Sales Return Report</p>
+
+                        <p routerLink="/quotation-report" class="menu-item">Quotation Report</p>
+
+                        <p routerLink="/payment-report-2" class="menu-item">Payment Report</p>
+
+                        <p routerLink="/stock-report" class="menu-item">Stock Report</p>
+
+                        <p routerLink="/low-stock-report" class="menu-item">Low Stock Report</p>
+
+                        <p routerLink="/income-report" class="menu-item">Income Report</p>
+
+                        <p routerLink="/tax-purchase" class="menu-item">Tax Report</p>
+
+                        <p routerLink="/profit-loss-list" class="menu-item">Profit & Loss</p>
                     </li>
                 </ul>
             </div>
