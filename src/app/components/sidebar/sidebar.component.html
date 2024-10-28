@@ -1,0 +1,209 @@
+<div class="main-wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <ul class="sidebar-vertical" style="overflow-x: auto; height: 88vh;">
+                    <!-- Main -->
+                    <li class="menu-title" (click)="toggleMenu('Main')">
+                        <span>Main</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('Main')">
+                        <p routerLink="/admin/dashboard" class="menu-item"><i class="fe fe-users"></i>
+                            <span>Dashboard</span>
+                        </p>
+                    </li>
+
+                    <!-- Application -->
+                    <li class="menu-title" (click)="toggleMenu('Application')">
+                        <span>Application</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('Application')">
+                        <p routerLink="/admin/application/chat" class="menu-item"><i class="fe fe-users"></i>
+                            <span>Chat</span>
+                        </p>
+                    </li>
+
+                    <!-- Customers -->
+                    <li class="menu-title" (click)="toggleMenu('customers')">
+                        <span>Customers</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('customers')">
+                        <p routerLink="/admin/customers/customers-list" class="menu-item"><i class="fe fe-users"></i>
+                            <span>Customers</span>
+                        </p>
+                        <p routerLink="/admin/customers/customer-details" class="menu-item"><i class="fe fe-file"></i>
+                            <span>Customer
+                                Details</span>
+                        </p>
+                        <p routerLink="/admin/customers/vendors-list" class="menu-item"><i class="fe fe-user"></i>
+                            <span>Vendors</span>
+                        </p>
+                    </li>
+
+                    <!-- Inventory -->
+                    <li class="menu-title" (click)="toggleMenu('productsServices')">
+                        <span>Products / Services</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('productsServices')">
+                        <p routerLink="/admin/productsServices/product-list" class="menu-item">Product List</p>
+                        <p routerLink="/admin/productsServices/category-list" class="menu-item">Category</p>
+                        <p routerLink="/admin/productsServices/inventory-list" class="menu-item">Inventory
+                        </p>
+                    </li>
+
+                    <!-- Signature -->
+                    <li class="menu-title" (click)="toggleMenu('signature')">
+                        <span>Signature</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('signature')">
+                        <p routerLink="/admin/signature/signature-list" class="menu-item"><i
+                                class="fe fe-clipboard"></i>
+                            <span>List of Signature</span>
+                        </p>
+                        <p routerLink="/admin/signature/signature-invoice" class="menu-item"><i class="fe fe-box"></i>
+                            <span>Signature Invoice</span>
+                        </p>
+                    </li>
+
+                    <!-- Sales -->
+                    <li class="menu-title" (click)="toggleMenu('sales')">
+                        <span>Sales</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+
+                    <li *ngIf="isActive('sales')">
+                        <p routerLink="/admin/sales/invoices" class="menu-item">Invoices List</p>
+
+                        <!-- <p routerLink="/admin/sales/invoice-details-admin" class="menu-item">Invoice Details (Admin)</p>
+
+                        <p routerLink="/admin/sales/invoice-details" class="menu-item">Invoice Details (Customer)</p> -->
+
+                        <p routerLink="/admin/sales/invoice-template" class="menu-item">Invoice Templates</p>
+
+                        <!-- <p routerLink="/admin/sales/recurring-invoices" class="menu-item">
+                            Recurring Invoices
+                        </p> -->
+
+                        <p routerLink="/admin/sales/credit-notes" class="menu-item">Credit
+                            Notes</p>
+                    </li>
+
+                    <!-- Purchases -->
+                    <li class="menu-title" (click)="toggleMenu('purchases')">
+                        <span>Purchases</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('purchases')">
+                        <p routerLink="/admin/purchases/list" class="menu-item"><i class="fe fe-shopping-cart"></i>
+                            <span>Purchases</span>
+                        </p>
+                    </li>
+                    <li *ngIf="isActive('purchases')">
+                        <p routerLink="/admin/purchases/purchase-orders" class="menu-item"><i
+                                class="fe fe-shopping-bag"></i>
+                            <span>Purchase Orders</span>
+                        </p>
+                    </li>
+                    <li *ngIf="isActive('purchases')">
+                        <p routerLink="/admin/purchases/debit-notes" class="menu-item"><i class="fe fe-file-text"></i>
+                            <span>Debit
+                                Notes</span></p>
+                    </li>
+
+                    <!-- Finance & Accounts -->
+                    <li class="menu-title" (click)="toggleMenu('financeAccounts')">
+                        <span>Finance & Accounts</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('financeAccounts')">
+                        <p routerLink="/expenses" class="menu-item"><i class="fe fe-file-plus"></i>
+                            <span>Expenses</span>
+                        </p>
+                    </li>
+                    <li *ngIf="isActive('financeAccounts')">
+                        <p routerLink="/payments" class="menu-item"><i class="fe fe-credit-card"></i>
+                            <span>Payments</span>
+                        </p>
+                    </li>
+
+                    <!-- Quotations -->
+                    <li class="menu-title" (click)="toggleMenu('quotations')">
+                        <span>Quotations</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('quotations')">
+                        <p routerLink="/quotations" class="menu-item"><i class="fe fe-clipboard"></i>
+                            <span>Quotations</span>
+                        </p>
+                    </li>
+                    <li *ngIf="isActive('quotations')">
+                        <p routerLink="/delivery-challans" class="menu-item"><i class="fe fe-file-text"></i>
+                            <span>Delivery Challans</span>
+                        </p>
+                    </li>
+
+                    <!-- Reports -->
+                    <li class="menu-title" (click)="toggleMenu('reportsMain')">
+                        <span>Reports</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                    </li>
+                    <li *ngIf="isActive('reportsMain')">
+                        <p routerLink="/payment-summary" class="menu-item"><i class="fe fe-credit-card"></i>
+                            <span>Payment Summary</span>
+                        </p>
+                    </li>
+                    <li class="submenu" *ngIf="isActive('reportsMain')" (click)="toggleMenu('reports')">
+                        <i class="fe fe-box"></i> <span>Reports</span>
+                        <i class="fa fa-angle-down fa-lg pull-right" aria-hidden="true"></i>
+                        <span class="menu-arrow"></span>
+                        <ul [ngStyle]="{ display: isActive('reports') ? 'block' : 'none' }">
+                            <li>
+                                <p routerLink="/expense-report" class="menu-item">Expense Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/purchase-report" class="menu-item">Purchase Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/purchase-return" class="menu-item">Purchase Return Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/sales-report" class="menu-item">Sales Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/sales-return-report" class="menu-item">Sales Return Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/quotation-report" class="menu-item">Quotation Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/payment-report-2" class="menu-item">Payment Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/stock-report" class="menu-item">Stock Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/low-stock-report" class="menu-item">Low Stock Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/income-report" class="menu-item">Income Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/tax-purchase" class="menu-item">Tax Report</p>
+                            </li>
+                            <li>
+                                <p routerLink="/profit-loss-list" class="menu-item">Profit & Loss</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Sidebar -->
+</div>

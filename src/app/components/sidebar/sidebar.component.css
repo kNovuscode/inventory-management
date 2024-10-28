@@ -1,0 +1,80 @@
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    /* Add padding for spacing */
+    cursor: pointer;
+    /* Change cursor to pointer for better UX */
+}
+
+/* Sidebar styles */
+.sidebar {
+    /* Sidebar background color */
+    width: 250px;
+    /* Sidebar width */
+    height: 100vh;
+}
+
+/* Sidebar links */
+.sidebar p {
+    padding: 15px 20px;
+    /* Padding for links */
+    margin: 0;
+    /* Remove default margin */
+    color: #000000;
+    /* Link text color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
+}
+
+/* Link hover effect */
+.sidebar p:hover {
+    background-color: #34495e;
+    /* Darker background on hover */
+    color: #ffffff;
+    /* Change text color on hover */
+}
+
+/* Active link styles */
+.sidebar p.active {
+    background-color: #2980b9;
+    /* Active link background color */
+    color: #ffffff;
+    /* Active link text color */
+}
+
+/* Icon styles */
+.sidebar p i {
+    margin-right: 10px;
+    /* Space between icon and text */
+}
+
+/* Nested submenu */
+.sidebar .submenu {
+    display: none;
+    /* Hide submenus by default */
+}
+
+.sidebar .submenu.active {
+    display: block;
+    /* Show submenu when active */
+}
+
+/* Submenu links */
+.sidebar .submenu p {
+    padding-left: 40px;
+    /* Indent submenu links */
+    color: #bdc3c7;
+    /* Submenu text color */
+}
+
+/* Submenu link hover effect */
+.sidebar .submenu p:hover {
+    background-color: #34495e;
+    /* Darker background on hover */
+    color: #ffffff;
+    /* Change text color on hover */
+}
